@@ -1,0 +1,263 @@
+age=[
+54
+65
+78
+81
+43
+67
+65
+65
+45
+83
+51
+60
+48
+54
+52
+52
+66
+37
+52
+56
+66
+49
+72
+55
+79
+51
+51
+83
+72
+55
+64
+62
+67
+59
+65
+83
+52
+80
+56
+61
+69
+71
+67
+54
+68
+48
+60
+48
+90
+79
+62
+39
+56
+54
+57
+44
+51
+58
+56
+50
+53
+67
+75
+55
+41
+42
+54
+74
+60
+54
+58
+55
+59
+67
+61
+58
+62
+92
+52
+46
+72
+58
+60
+38
+51
+59
+57
+52
+71
+60
+56
+58
+63
+69
+49
+67
+46
+58
+59
+51
+62
+47
+65
+50
+76
+56
+46
+60
+55
+56
+42
+31
+51
+61
+60
+47
+54
+44
+54
+50
+67
+76
+55
+62
+57
+52
+55
+74
+50
+51
+67
+52
+64
+44
+80
+68
+77
+43
+40
+47
+50
+81
+59
+47
+59
+51
+54
+46
+52
+64
+57
+55
+50
+41
+46
+46
+56
+68
+42
+62
+71
+64
+56
+72
+47
+65
+58
+58
+59
+35
+46
+54
+73
+62
+48
+84
+70
+62
+67
+49
+58
+57
+58
+39
+59
+53
+58
+45
+52
+49
+57
+56
+54
+64
+56
+72
+37
+46
+47
+51
+54
+54
+54
+55
+48
+53
+50
+76
+55
+75
+77
+54];
+
+for i=1:length(age)
+    % we don't have patients younger than 30 years old, yet
+    if(age(i)>=30 & age(i)<=34)
+        ldlone(i)=-1;cholone(i)=-1;%disp('30-34');
+    end;
+    if(age(i)>=35 & age(i)<=39)
+        ldlone(i)=0;cholone(i)=0;%disp('35-39');
+    end;
+    if(age(i)>=40 & age(i)<=44)
+        ldlone(i)=1;cholone(i)=1;%disp('40-44');
+    end;
+    if(age(i)>=45 & age(i)<=49)
+        ldlone(i)=2;cholone(i)=2;
+    end;
+    if(age(i)>=50 & age(i)<=54)
+        ldlone(i)=3;cholone(i)=3;
+    end;
+    if(age(i)>=55 & age(i)<=59)
+        ldlone(i)=4;cholone(i)=4;
+    end;
+    if(age(i)>=60 & age(i)<=64)
+        ldlone(i)=5;cholone(i)=5;
+    end;
+    if(age(i)>=65 & age(i)<=69)
+        ldlone(i)=6;cholone(i)=6;
+    end;
+    if(age(i)>=70 & age(i)<=74)
+        ldlone(i)=7;cholone(i)=7;
+    end;
+    % this is what I deduced... not from Framingham
+    if(age(i)>=75 & age(i)<=79)
+        ldlone(i)=8;cholone(i)=8;
+    end;
+    if(age(i)>=80 & age(i)<=84)
+        ldlone(i)=9;cholone(i)=9;
+    end;
+    if(age(i)>=85 & age(i)<=89)
+        ldlone(i)=10;cholone(i)=10;
+    end;
+    if(age(i)>=90 & age(i)<=94)
+        ldlone(i)=11;cholone(i)=11;
+    end;
+    if(age(i)>=95 & age(i)<=99)
+        ldlone(i)=12;cholone(i)=12;
+    end;
+        
+end     
+            
+   
