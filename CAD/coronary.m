@@ -55,9 +55,29 @@ bmi = bmi';
 y = y';
 u = [sbp dbp bg bmi]; % combine four inputs into one matrix
 
-data = iddata(y,u,1);
-de = data(1:500); % data for estimation
-dv = data(500:1000); % data for validation
+sbpe = sbp(1:2:end);
+sbpv = sbp(2:2:end);
+
+dbpe = dbp(1:2:end);
+dbpv = dbp(2:2:end);
+
+bge = bg(1:2:end);
+bgv = bg(2:2:end);
+
+bmie = bmi(1:2:end);
+bmiv = bmi(2:2:end);
+
+ue = [sbpe dbpe bge bmie];
+uv = [sbpv dbpv bgv bmiv];
+
+ye = y(1:2:end);
+yv = y(2:2:end);
+
+de = iddata(ye,ue,2);
+dv = iddata(yv,uv,2);
+%data = iddata(y,u,1);
+%de = data(1:500); % data for estimation
+%dv = data(500:1000); % data for validation
 
 de = detrend(de);
 m = pem(de); % state-space model, order is automatically determined, using a prediciton error method
